@@ -1,0 +1,8 @@
+<% layout("./template/boilerplate.ejs") %>
+<body>
+    <% if (msg) {%>
+        <div class="alert alert-danger mainmsgerr" role="alert">
+            <%= msg %>
+          </div>
+    <%} %>
+</body>

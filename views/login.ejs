@@ -1,0 +1,28 @@
+<% layout("./template/boilerplate.ejs") %>
+<body>
+    <div class="signupform">
+        <div class="form13">
+            <p class="form13-heading">LogIn</p>
+            <form action="/user/login" method="post">
+              <div class="inputBox">
+                <label for="form13-email">Username</label>
+                <input type="text" id="form13-email" name="username" required>
+              </div>
+              <div class="inputBox">
+                <label for="form13-password">Password</label>
+                <input type="password" id="form13-password" name="password" required>
+              </div>
+              <button class="login-button" type="submit">
+                LogIn
+              </button>
+            </form>
+            <p class="signup-link">
+              Don't have an account?
+              <a href="/user/signup">
+                SignUp
+              </a>
+            </p>
+          </div>
+    </div>
+
+</body>

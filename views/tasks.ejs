@@ -1,0 +1,31 @@
+<% layout("./template/boilerplate.ejs") %>
+<body>
+    <div class="tasks">
+        <div class="tasksform">
+            <form action="/taskflow/add" class="" method="post">
+                <div class="input14">
+                  <input type="text" class="form-control" placeholder="Title" name="title" required>
+                  <span></span>
+                </div>
+                <div class="text">
+                  <textarea type="text" placeholder="Task" name="task" required></textarea>
+                </div>
+                <button type="submit" class="button32">Add</button>
+            </form>
+        </div>
+        <div class="alltasks">
+          <% allTasks.forEach((task)=>{%>
+            <div class="maintasks">
+                <h5><%= task.title %>  |<span> <%= new Date(task.Time).toLocaleDateString('en-US') %></span></h5>
+                <h6><%= task.task %></h6>
+                <div class="tasksbtn">
+                    <form action="/taskflow/add/<%= userInfo.id %>/<%= task._id %>/delete?_method=DELETE" method="post">
+                      <button class="button40">Delete</button>
+                    </form>
+                </div>
+              </div>
+          <%}) %>
+        </div>
+    </div>
+    
+</body>

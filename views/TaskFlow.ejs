@@ -1,0 +1,36 @@
+<% layout('./template/boilerplate.ejs') %>
+<body>
+   <div id="taskflow">
+    <div class="left">
+        <h1>Daily Goals</h1>
+        <p>Plan Ahead, Stay Ahead.</p>
+        <form action="/taskflow/add" method="get">
+            <button type="submit" class="addtaskbtn">Add-Tasks</button>
+        </form>
+    </div>
+    <div class="right">
+        <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="https://images.unsplash.com/photo-1725904411459-fe8233df1424?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="mixed vegetable salad in a mason jar. "></div>
+              <div class="card_content">
+                <h2 class="card_title">Small Steps,Big Achievement</h2>
+                <div class="card_text">
+                  <p>Small steps every day lead to big achievements. Write it down, make it happen!</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="https://images.unsplash.com/photo-1725203574073-79922f64110a?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="mixed vegetable salad in a mason jar. "></div>
+              <div class="card_content">
+                <h2 class="card_title">Conquer Your Goals</h2>
+                <div class="card_text">
+                  <p>Each day is a new chance to conquer your goals. Start with a list!</p>
+                </div>
+              </div>
+            </div>
+          </li>
+    </div>
+   </div>
+</body>

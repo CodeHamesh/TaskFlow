@@ -1,0 +1,48 @@
+<nav>
+  <div class="logo">
+    <h2>TaskFlow</h2>
+  </div>
+  <div class="links">
+    <a href="/">home</a><a href="/taskflow/add">My-Tasks</a>
+    <% if (userInfo) {%>
+        <a href="/user/logout">Logout</a>
+ 
+    <%}%>
+   <% if (!userInfo) {%>
+    <a href="/user/login">login</a>
+  <% } %>
+
+  <% if (userInfo) {%>
+    <a href="/" class="name">Hii <%= userInfo.name %></a>
+<% } %>
+  </div>
+  <div class="menu">
+    <span class="material-symbols-outlined">
+        menu_open
+        </span>
+  </div>
+  <div class="sidemenu">
+    <div class="close">
+        <h3>Menu</h3>
+        <div class="menuclose">
+            <span class="close-icon">
+                <i class="fas fa-times"></i>
+              </span>
+        </div>
+    </div>
+    <div class="sidelinks">
+      <a href="/">home</a><a href="/taskflow/add">My-Tasks</a>
+      <% if (userInfo) {%>
+          <a href="/user/logout">Logout</a>
+   
+      <%}%>
+     <% if (!userInfo) {%>
+      <a href="/user/login">login</a>
+    <% } %>
+  
+    <% if (userInfo) {%>
+      <a href="/" class="name">Hii <%= userInfo.name %></a>
+  <% } %>
+    </div>
+  </div>
+</nav>
